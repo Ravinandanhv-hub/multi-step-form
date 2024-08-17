@@ -55,4 +55,9 @@ p {
 
 input {
   display: block;
+  width: 70%;
+  padding: 2%;
+  border-radius: 5px;
+  margin-top: 2%;
+  border: 1px solid var(--light-gray);
 }

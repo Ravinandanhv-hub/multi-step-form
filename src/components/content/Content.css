@@ -3,3 +3,13 @@
     margin-top: 5%;
     color: var(--marine-blue);
 }
+
+.form-control {
+    margin-top: 5%;
+}
+
+.ui-btn-primary {
+    margin-top: 7%;
+    float: right;
+    margin-right: 25%;
+}

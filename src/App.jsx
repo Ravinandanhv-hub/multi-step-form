@@ -18,7 +18,7 @@ function App() {
         }
       </div>
       <div className='content'>
-        <Content/>
+        <Content stepCount={stepCount}/>
       </div>
     </div>
   )
