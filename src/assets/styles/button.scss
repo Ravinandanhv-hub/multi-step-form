@@ -1,0 +1,34 @@
+$btnPrimaryColor: var(--white); 
+$btnPrimaryBgColor: var(--marine-blue);
+@mixin button-variant($color, $background) {
+  border-radius: 2px;
+  border: 0 none;
+  outline: none;
+  color: $color;
+  background-color: $background;
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 45px;
+  cursor: pointer;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: $background;
+  }
+}
+  
+.ui-btn-primary {
+  @include button-variant($btnPrimaryColor, $btnPrimaryBgColor);
+}
+  // .ui-btn-secondary {
+  //   @include button-variant($btnSecondaryColor, $btnSecondaryBgColor);
+  // }
+  
+  // .ui-btn-danger {
+  //   @include button-variant($btnDangerColor, $btnDangerBgColor);
+  // }
+  
+  // .ui-btn-success {
+  //   @include button-variant($btnSuccessColor, $btnSuccessBgColor);
+  // }
