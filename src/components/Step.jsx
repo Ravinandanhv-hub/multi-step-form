@@ -1,11 +1,12 @@
 import React from 'react'
+import './Step.css'
+import '../assets/styles/button.scss'
 
 function Step(props) {
-  console.log(props);
   return (
     <div className='step'>
-        <div></div>
-        <div style={{display: 'grid'}}><span>STEP {props.index + 1}</span><span>{props.stepName}</span></div>
+        <div className='bubble'>{props.index + 1}</div>
+        <div><div style={{fontSize: 'small'}}>STEP {props.index + 1}</div><div>{props.stepName}</div></div>
     </div>
   )
 }

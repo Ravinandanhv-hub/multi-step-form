@@ -1,13 +1,11 @@
 .warpper {
   background-color: var(--white);
-  width: 80vw;
+  width: 60vw;
   height: 80vh;
   border-radius: 2%;
-  /* border: 1px solid red; */
-  /* margin: auto; */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  /* align-items: center; */
   box-sizing: border-box;
   padding: 2%;
 }
@@ -17,15 +15,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
-  width: 37%;
+  width: 100%;
+  border-radius: 10px;
 }
 
 .content {
   height: 100%;
   width: 100%;
-}
-
-.step {
-  display: grid;
-  place-items: center;
 }

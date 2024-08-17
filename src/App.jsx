@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import Step  from './components/Step'
+import Content from './components/content/Content'
 // import sidebarImg from './assets/images/bg-sidebar-desktop.svg'
 
 function App() {
@@ -16,7 +17,9 @@ function App() {
           )
         }
       </div>
-      <div className='content'></div>
+      <div className='content'>
+        <Content/>
+      </div>
     </div>
   )
 }
