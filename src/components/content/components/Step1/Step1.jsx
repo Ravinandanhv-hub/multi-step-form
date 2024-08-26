@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
 import { useForm } from 'react-hook-form'
-import { stepCountDispatchContext } from '../../../../Reducers/StepCount';
+// import { stepCountDispatchContext } from '../../../../Reducers/StepCount';
+import { useDispatch } from 'react-redux';
 
 export default function Step1() {
     const  {register, handleSubmit, formState: { errors }} = useForm();
-    const dispatch = useContext(stepCountDispatchContext);
+    // const dispatch = useContext(stepCountDispatchContext);
+    const dispatch = useDispatch();
 
     const onSubmit = (data) => {
         dispatch({type: 'next'})

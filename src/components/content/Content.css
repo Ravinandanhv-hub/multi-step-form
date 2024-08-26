@@ -13,3 +13,11 @@
     float: right;
     margin-right: 25%;
 }
+
+.go-back {
+    color: var(--cool-gray);
+    cursor: pointer;
+    &:hover {
+        color: var(--marine-blue);
+    }
+}

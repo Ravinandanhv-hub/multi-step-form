@@ -1,19 +1,24 @@
-import { useState, useReducer } from 'react'
+// import { useState, useReducer } from 'react'
+import { useSelector } from 'react-redux'
 import './App.css'
 import Step  from './components/Step'
 import Content from './components/content/Content'
-import stepCountReducer from './Reducers/StepCount'
-import {stepCountContext, stepCountDispatchContext} from './Reducers/StepCount'
+// import stepCountReducer from './Reducers/StepCount'
+// import {stepCountContext, stepCountDispatchContext} from './Reducers/StepCount'
 // import sidebarImg from './assets/images/bg-sidebar-desktop.svg'
 
 function App() {
-  // const [stepCount, setStepCount] = useState(0);
-  const [stepCount, dispatch] = useReducer(stepCountReducer, 0)
+  // using reducer and context API
+  // const [stepCount, dispatch] = useReducer(stepCountReducer, 0)
   const steps = ['YOUR INFO', 'SELECT PLAN', 'ADDS-ONS', 'SUMMARY']
 
+  // Redux
+  const stepCount = useSelector(state => state.stepCount);
+
   return (
-    <stepCountContext.Provider value={stepCount}>
-      <stepCountDispatchContext.Provider value={dispatch}>
+    // using reducer and context API
+    // <stepCountContext.Provider value={stepCount}>
+    //   <stepCountDispatchContext.Provider value={dispatch}>
         <div className='warpper'>
           <div className='steper'>
             {
@@ -23,11 +28,11 @@ function App() {
             }
           </div>
           <div className='content'>
-            <Content stepCount={stepCount}/>
+            <Content/>
           </div>
         </div>
-      </stepCountDispatchContext.Provider>
-    </stepCountContext.Provider>
+    //   </stepCountDispatchContext.Provider>
+    // </stepCountContext.Provider>
   )
 }
 

@@ -1,5 +1,6 @@
 $btnPrimaryColor: var(--white); 
 $btnPrimaryBgColor: var(--marine-blue);
+// $btnSecondaryColor, $btnSecondaryBgColor
 @mixin button-variant($color, $background) {
   border-radius: 2px;
   border: 0 none;
@@ -21,9 +22,9 @@ $btnPrimaryBgColor: var(--marine-blue);
 .ui-btn-primary {
   @include button-variant($btnPrimaryColor, $btnPrimaryBgColor);
 }
-  // .ui-btn-secondary {
-  //   @include button-variant($btnSecondaryColor, $btnSecondaryBgColor);
-  // }
+// .ui-btn-secondary {
+//   @include button-variant($btnSecondaryColor, $btnSecondaryBgColor);
+// }
   
   // .ui-btn-danger {
   //   @include button-variant($btnDangerColor, $btnDangerBgColor);
