@@ -9,8 +9,8 @@ export default function Step1() {
     const dispatch = useDispatch();
 
     const onSubmit = (data) => {
-        dispatch({type: 'next'})
-        console.log(data);
+        dispatch({type: 'next'});
+        dispatch({type: 'UPDATE', data: data});
     }
 
     return (

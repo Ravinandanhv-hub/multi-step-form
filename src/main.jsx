@@ -3,10 +3,16 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, combineReducers } from 'redux'
 import stepCountReducer from './Reducers/StepCount'
+import formDataReducer from './Reducers/formData.js'
 
-const  store = createStore(stepCountReducer, {stepCount: 0},
+const rootReducers = combineReducers({
+  step: stepCountReducer,
+  formData: formDataReducer
+});
+
+const  store = createStore(rootReducers,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 

@@ -1,0 +1,39 @@
+.ui-btn-primary {
+    margin-left: 40%;
+    float: none;
+    margin-right: 0;
+}
+
+.plan-parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5%;
+    margin: 10% 18% 5% 0%;
+}
+
+.plan {
+    height: 20vh;
+    width: 100%;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 13%;
+    cursor: pointer;
+    &:first-child {
+        border: 1px solid var(--purplish-blue);
+    }
+    &:nth-child(2) {
+        border: 1px solid var(--purplish-blue);
+    }
+    &:nth-child(3) {
+        border: 1px solid var(--cool-gray);
+    }
+}
+
+.plan-name {
+    color: var(--marine-blue);
+    font-weight: 500;
+}
+
+.plan-rate {
+    color: var(--cool-gray);
+}

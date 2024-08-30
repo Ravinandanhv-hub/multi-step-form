@@ -13,7 +13,7 @@ function App() {
   const steps = ['YOUR INFO', 'SELECT PLAN', 'ADDS-ONS', 'SUMMARY']
 
   // Redux
-  const stepCount = useSelector(state => state.stepCount);
+  const stepCount = useSelector(state => state.step.stepCount);
 
   return (
     // using reducer and context API

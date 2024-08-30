@@ -4,13 +4,13 @@ import Step1 from './components/Step1/Step1';
 import Step2 from './components/Step2/Step2';
 import Step3 from './components/Step3/Step3';
 import Step4 from './components/Step4/Step4';
-import { stepCountContext } from '../../Reducers/StepCount';
+// import { stepCountContext } from '../../Reducers/StepCount';
 import { useSelector } from 'react-redux';
 
 export default function Content() {
   // context API
   // const stepCount = useContext(stepCountContext);
-  const stepCount = useSelector(state => state.stepCount);
+  const stepCount = useSelector(state => state.step.stepCount);
 
   const renderLogic = () => {
     switch(stepCount){

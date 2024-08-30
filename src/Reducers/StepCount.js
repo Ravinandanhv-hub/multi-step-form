@@ -1,9 +1,10 @@
-import { createContext } from "react";
+// use context API
+// import { createContext } from "react";
 
-export const stepCountContext = createContext(null);
-export const stepCountDispatchContext = createContext(null);
+// export const stepCountContext = createContext(null);
+// export const stepCountDispatchContext = createContext(null);
 
-function stepCountReducer(state, action) {
+function stepCountReducer(state = {stepCount: 0}, action) {
     switch(action.type) {
         case 'next': 
             return {stepCount: state.stepCount + 1}
