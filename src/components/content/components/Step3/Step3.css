@@ -1,0 +1,45 @@
+.addon-wrapper {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10%;
+    margin-top: 7%;
+}
+
+.addon {
+    border: 1px solid var(--cool-gray);
+    border-radius: 5px;
+    width: 80%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+.addon-details {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 85%;
+}
+
+.addon-label {
+    color: var(--marine-blue);
+    font-weight: 500;
+}
+
+.addon-des {
+    color: var(--cool-gray); 
+    font-size: smaller;
+}
+
+.addon-price {
+    color: var(--purplish-blue);
+}
+
+input[type='checkbox'] {
+    width: 10%;
+    height: 15px;
+    &:checked {
+        accent-color: var(--purplish-blue);
+    }
+}

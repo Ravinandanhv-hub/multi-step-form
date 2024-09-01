@@ -1,17 +1,22 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 // import { stepCountDispatchContext } from '../../../../Reducers/StepCount';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 export default function Step1() {
-    const  {register, handleSubmit, formState: { errors }} = useForm();
+    const  {register, handleSubmit, formState: { errors }, reset} = useForm();
     // const dispatch = useContext(stepCountDispatchContext);
+    const data = useSelector((state) => state.formData.info);
     const dispatch = useDispatch();
 
     const onSubmit = (data) => {
         dispatch({type: 'next'});
-        dispatch({type: 'UPDATE', data: data});
+        dispatch({type: 'UPDATEINFO', data: data});
     }
+
+    useEffect(() => {
+        reset(data)
+    }, [])
 
     return (
     <>
