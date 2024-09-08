@@ -1,4 +1,4 @@
-export default function formDataReducer(state = {info: {name: '', email: '', phone: ''}, plan: {type: '', tenure: 'monthly'}, addons : { onlineService: false, largerStorage: false, customizableProfile: false }}, action) {
+export default function formDataReducer(state = {info: {name: '', email: '', phone: ''}, plan: {type: '', tenure: 'monthly', price: 0}, addons : { onlineService: false, largerStorage: false, customizableProfile: false }}, action) {
     switch(action.type) {
         case 'UPDATEINFO':
             return { ...state, info: { ...action.data }};

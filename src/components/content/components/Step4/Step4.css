@@ -1,4 +1,25 @@
 .thanks-wrapper {
-    margin-top: 25%;
+    padding: 15% 18% 5% 0%;
     text-align: center;
+}
+
+.summary-container {
+    height: auto;
+    box-sizing: border-box;
+    padding: 8% 18% 5% 0%;
+}
+
+.summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5%;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.oddOns-style {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2%;
 }
