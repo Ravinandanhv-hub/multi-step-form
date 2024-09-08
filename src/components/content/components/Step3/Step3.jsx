@@ -58,7 +58,7 @@ export default function Step3() {
             </div>
         </label>
       </div>
-      <div style={{ marginTop: '8%' }}>
+      <div className='footer' style={{marginTop: '19.5%'}}>
         <span className='go-back' onClick={() => onBack()}>Go Back</span>
         <button className='ui-btn-primary' type='submit' onClick={() => onSubmit()}>Next Step</button>
       </div>

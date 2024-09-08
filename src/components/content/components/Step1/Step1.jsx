@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 // import { stepCountDispatchContext } from '../../../../Reducers/StepCount';
 import { useDispatch, useSelector } from 'react-redux';
+import classes from './Step1.module.css'
 
 export default function Step1() {
     const  {register, handleSubmit, formState: { errors }, reset} = useForm();
@@ -36,7 +37,7 @@ export default function Step1() {
                     <label>Phone Number</label>
                     <input style={errors?.name ? {borderColor : 'var(--strawberry-red) !important'} : {}} placeholder='e.g. 22222 22222' {...register('phone', {required: 'Phone Number Required', pattern: /^[()+-.s0-9][^\r\na-zA-Z]{0,49}$/ })}></input>
                 </div>
-                <button className='ui-btn-primary' type='submit'>Next Step</button>
+                <button className={`ui-btn-primary ${classes.nextBtn}`} type='submit'>Next Step</button>
             </form>
         </div>
     </>

@@ -37,7 +37,7 @@ export default function Step4() {
     
             </div>
           </div>
-          <div>
+          <div className='footer'>
             <span className='go-back' onClick={() => onBack()}>Go Back</span>
             <button className='ui-btn-primary' type='submit' onClick={() => setConfirm(true)}>Confirm</button>
           </div>
