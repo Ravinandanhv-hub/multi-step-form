@@ -23,6 +23,10 @@ export default function Step4() {
     updateTotal(total);
   }
 
+  const handleChange = () => {
+    dispatch({ type: 'byValue', data: 1 })
+  }
+
   useEffect(()=>{
     getTotal();
   }, []);
@@ -48,7 +52,7 @@ export default function Step4() {
                       { formData.plan.type } ({ formData.plan.tenure })
                     </div>
                     <div>
-                      <small style={{color: 'var(--cool-gray)', textDecoration: 'underline', cursor: 'pointer'}}>Change</small>
+                      <small style={{color: 'var(--cool-gray)', textDecoration: 'underline', cursor: 'pointer'}} onClick={handleChange}>Change</small>
                     </div>
                   </div>
                   <div style={{fontWeight: '500'}} id='price'>
