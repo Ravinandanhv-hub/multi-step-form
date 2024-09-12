@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form'
 // import { stepCountDispatchContext } from '../../../../Reducers/StepCount';
 import { useDispatch, useSelector } from 'react-redux';
 import classes from './Step1.module.css'
+import { validate } from '../../../../validators/Validator';
 
 export default function Step1() {
     const  {register, handleSubmit, formState: { errors }, reset} = useForm();
@@ -15,8 +16,18 @@ export default function Step1() {
         dispatch({type: 'UPDATEINFO', data: data});
     }
 
+    const handleKeyboardEvent = (event) => {
+        const value = event.target['value'] + event.key;
+        const regex = new RegExp(validate.number);
+        const result = regex.test(value);
+        if (!result && event.keyCode !== 8) {
+            event.preventDefault();
+        }
+    }
+
     useEffect(() => {
         reset(data)
+        console.log(validate)
     }, [])
 
     return (
@@ -31,11 +42,11 @@ export default function Step1() {
                 </div>
                 <div className='form-control'>
                     <label>Email Address</label>
-                    <input style={errors?.name ? {borderColor : 'var(--strawberry-red) !important'} : {}} placeholder='e.g. ram@gamil.com' {...register('email', {required: 'Email is required', pattern:/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/})}></input>
+                    <input style={errors?.name ? {borderColor : 'var(--strawberry-red) !important'} : {}} placeholder='e.g. ram@gamil.com' {...register('email', {required: 'Email is required', pattern: validate.email })}></input>
                 </div>
                 <div className='form-control'>
                     <label>Phone Number</label>
-                    <input style={errors?.name ? {borderColor : 'var(--strawberry-red) !important'} : {}} placeholder='e.g. 22222 22222' {...register('phone', {required: 'Phone Number Required', pattern: /^[()+-.s0-9][^\r\na-zA-Z]{0,49}$/ })}></input>
+                    <input onKeyDown={handleKeyboardEvent} style={errors?.name ? {borderColor : 'var(--strawberry-red) !important'} : {}} placeholder='e.g. 22222 22222' {...register('phone', {required: 'Phone Number Required', pattern: validate.number, maxLength: 10, minLength: 10})}></input>
                 </div>
                 <button className={`ui-btn-primary ${classes.nextBtn}`} type='submit'>Next Step</button>
             </form>
