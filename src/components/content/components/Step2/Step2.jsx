@@ -3,6 +3,9 @@ import React, { useContext, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './Step2.css';
 import Switch from '@mui/material/Switch';
+import arcadeImg from '../../../../assets/images/icon-arcade.svg';
+import advancedImg from '../../../../assets/images/icon-advanced.svg'
+import iconPro from '../../../../assets/images/icon-pro.svg'
 
 export default function Step2() {
     // use context API
@@ -43,21 +46,21 @@ export default function Step2() {
             </div>
             <div className='plan-parent'>
                 <div className='plan' onClick={() => updatePlan('arcade', plan.tenure == 'monthly' ? 9 : 90 )} style={plan.type === 'arcade' ? {background: 'rgb(227 240 251)'} : {}}>
-                    <img src='src/assets/images/icon-arcade.svg' />
+                    <img src={arcadeImg} />
                     <div style={{marginTop: "30%"}}>
                         <div className='plan-name'>Arcade</div>
                         <div className='plan-rate'>{ plan.tenure == 'monthly' ? '$9/mo' : '$90/yr'}</div>
                     </div>
                 </div>
                 <div className='plan' onClick={() => updatePlan('advanced', plan.tenure == 'monthly' ? 12 : 120)} style={plan.type === 'advanced' ? {background: 'rgb(227 240 251)'} : {}}>
-                    <img src='src/assets/images/icon-advanced.svg' />
+                    <img src={advancedImg} />
                     <div style={{marginTop: "30%"}}>
                         <div className='plan-name'>Advanced</div>
                         <div className='plan-rate'>{ plan.tenure == 'monthly' ? '$12/mo' : '$120/yr' }</div>
                     </div>
                 </div>
                 <div className='plan' onClick={() => updatePlan('pro', plan.tenure == 'monthly' ? 15 : 150)} style={plan.type === 'pro' ? {background: 'rgb(227 240 251)'} : {}}>
-                    <img src='src/assets/images/icon-pro.svg' />
+                    <img src={iconPro} />
                     <div style={{marginTop: "30%"}}>
                         <div className='plan-name'>Pro</div>
                         <div className='plan-rate'>{ plan.tenure == 'monthly' ? '$15/mo' : '$150/yr' }</div>
