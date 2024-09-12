@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import './Step4.css'
+import thanksImg from '../../../../assets/images/icon-thank-you.svg'
 
 export default function Step4() {
 
@@ -34,7 +35,7 @@ export default function Step4() {
   return (
       confirm ? (
         <div className='thanks-wrapper'>
-          <img src='src/assets/images/icon-thank-you.svg'/>
+          <img src={thanksImg} />
           <p style={{ fontWeight: 'bold' }}>Thank you!</p>
           <small style={{color: 'var(--cool-gray)'}}>Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</small>
         </div>
