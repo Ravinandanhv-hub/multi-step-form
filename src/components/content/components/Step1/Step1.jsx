@@ -46,7 +46,7 @@ export default function Step1() {
                 </div>
                 <div className='form-control'>
                     <label>Phone Number</label>
-                    <input onKeyDown={handleKeyboardEvent} style={errors?.name ? {borderColor : 'var(--strawberry-red) !important'} : {}} placeholder='e.g. 22222 22222' {...register('phone', {required: 'Phone Number Required', pattern: validate.number, maxLength: 10, minLength: 10})}></input>
+                    <input min={10} max={10} onKeyDown={handleKeyboardEvent} style={errors?.name ? {borderColor : 'var(--strawberry-red) !important'} : {}} placeholder='e.g. 22222 22222' {...register('phone', {required: 'Phone Number Required', pattern: validate.number, maxLength: 10, minLength: 10})}></input>
                 </div>
                 <button className={`ui-btn-primary ${classes.nextBtn}`} type='submit'>Next Step</button>
             </form>
