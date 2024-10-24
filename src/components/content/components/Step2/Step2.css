@@ -1,6 +1,6 @@
 .plan-parent {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 5%;
     margin: 8% 18% 5% 0%;
 }
